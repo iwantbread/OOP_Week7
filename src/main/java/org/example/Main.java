@@ -1,17 +1,78 @@
 package org.example;
 
+public class Main {}
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        /*public int i;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        for (i = 0;i >= 5 || i <= 0) {
+            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
+                    "Search by ID\nRemove Member\n5. Exit");
+            i = System.in.read(int i);
+
+            if (i == 1) {
+
+            }
+            */
+        System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
+                "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
+
+        int i = Integer.parseInt(System.console().readLine());
+
+        if (i == 1) {
+            System.out.println("Enter Member ID: ");
+            int memberID = Integer.parseInt(System.console().readLine());
+            System.out.println("Enter Member Name: ");
+            String name = System.console().readLine();
+            System.out.println("Enter Age: ");
+            int age = Integer.parseInt(System.console().readLine());
+
+            Member.addMember(memberID, name, age);
+
+            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
+                    "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
+
+            int i = Integer.parseInt(System.console().readLine());
+        }
+
+        if (i == 2) {
+            int j;
+            for (j = 0; j < member.size(); j++) {
+                members.get(j).System.out.println(members);
+            }
+
+            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
+                    "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
+
+            int i = Integer.parseInt(System.console().readLine());
+        }
+        if (i == 3) {
+            System.out.println("Enter Member ID: ");
+            int memberID = Integer.parseInt(System.console().readLine());
+
+            return members.findMemberById(memberID);
+
+
+            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
+                    "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
+
+            int i = Integer.parseInt(System.console().readLine());
+        }
+
+        if(i = 4) {
+
+
+
+            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
+                    "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
+
+            int i = Integer.parseInt(System.console().readLine());
+        }
+
+        if(i == 5) {
+
         }
     }
 }
