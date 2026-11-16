@@ -2,30 +2,48 @@
 
 ## 1. My Original Examination Grade
 
-### Task 1 — /40
+### Task 1 — 30/40
 **My mark:**
 30/40
 **Why I awarded this mark:**
 Scanner was never implemented which cost me a full
 10 marks but the first 2 parts of task one were done
-well.
-### Task 2 — /40
+well, i.e. the private fields, getters, constructor, displayDetails().
+### Task 2 — 10/40
 **My mark:**
 10/40
 **Why I awarded this mark:**
-I created an arraylist but not sure if i maintained it.
+I created an arraylist and attempted to maintain it.
+
 I attempted to add new member objects using the details entered by the user
 but there was a lot of red that i spent a lot of time trying to fix
+
 i created a display details function but i never got the code to run so
-i wasn't able to check it.
-### Task 3 — /20
+i wasn't able to check it. I wanted to use to display members from ArrayList
+but couldn't get it working
+
+I tried to add methods for adding and searching but 
+wasn't able to call on them to debug them. 
+
+Also my members list was declared inside the member class
+which i am told by ai is a design flaw. still trying to wrap my head around this one.
+
+10 marks maybe a little generous.
+### Task 3 — 2/20
 **My mark:**
-5/40
+2/20
 **Why I awarded this mark:**
 This was the worst task of the lot, there was an attempt at building
 a remove member function but it wasn't finished and couldn't accept a 
-user input due to the previously mentioned missed scanner functionality
-**Total self-assessed grade:** 45/100
+user input due to the previously mentioned missed scanner functionality.
+And besides that it never actually removed a member. partially because i 
+was struggling to figure out how to do it but also i was running out 
+of time with all mmy messing around with the other parts.
+
+no age validation
+
+no handling of missing members
+**Total self-assessed grade:** 42/100
 
 ## 2. Corrections and Improvements
 
