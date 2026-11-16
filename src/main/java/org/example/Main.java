@@ -1,7 +1,11 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         /*public int i;
 
         for (i = 0;i >= 5 || i <= 0) {
@@ -16,22 +20,25 @@ public class Main {
         System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
                 "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
 
-        int i = Integer.parseInt(System.console().readLine());
+        int i = scanner.nextInt();
+        scanner.nextLine();
 
         if (i == 1) {
             System.out.println("Enter Member ID: ");
-            int memberID = Integer.parseInt(System.console().readLine());
+            String memberID = scanner.nextLine();
             System.out.println("Enter Member Name: ");
-            String name = System.console().readLine();
+            String name = scanner.nextLine();
             System.out.println("Enter Age: ");
-            int age = Integer.parseInt(System.console().readLine());
+            int age = scanner.nextInt();
 
-            Member.addMember(memberID, name, age);
+            scanner.nextLine();
+
+            Member member = new Member(memberID, name, age);
 
             System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
                     "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
 
-            int i = Integer.parseInt(System.console().readLine());
+            i = scanner.nextInt();
         }
 
         if (i == 2) {
@@ -43,7 +50,8 @@ public class Main {
             System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
                     "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
 
-            int i = Integer.parseInt(System.console().readLine());
+            i = scanner.nextInt();
+            scanner.nextLine();
         }
         if (i == 3) {
             System.out.println("Enter Member ID: ");
@@ -55,7 +63,8 @@ public class Main {
             System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
                     "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
 
-            int i = Integer.parseInt(System.console().readLine());
+            i = scanner.nextInt();
+            scanner.nextLine();
         }
 
         if(i = 4) {
@@ -65,7 +74,8 @@ public class Main {
             System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
                     "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
 
-            int i = Integer.parseInt(System.console().readLine());
+            i = scanner.nextInt();
+            scanner.nextLine();
         }
 
         if(i == 5) {
