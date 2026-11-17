@@ -35,12 +35,14 @@ public class Main {
 
             Member member = new Member(memberID, name, age);
 
+            member.displayDetails();
+
             System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
                     "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
 
             i = scanner.nextInt();
         }
-
+        /*
         if (i == 2) {
             int j;
             for (j = 0; j < member.size(); j++) {
@@ -53,6 +55,7 @@ public class Main {
             i = scanner.nextInt();
             scanner.nextLine();
         }
+
         if (i == 3) {
             System.out.println("Enter Member ID: ");
             int memberID = Integer.parseInt(System.console().readLine());
@@ -81,5 +84,7 @@ public class Main {
         if(i == 5) {
 
         }
+
+        */
     }
 }
