@@ -1,90 +1,98 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        List<Member> members = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-        /*public int i;
+        int i = 0;
 
-        for (i = 0;i >= 5 || i <= 0) {
-            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
-                    "Search by ID\nRemove Member\n5. Exit");
-            i = System.in.read(int i);
+        while (i != 5) {
+            System.out.println("---Gym Membership Manager---\n1. Add Member\n2. Display All Members\n" +
+                    "3. Search by ID\n4. Remove Member\n5. Exit\nEnter Choice: ");
+
+            i = scanner.nextInt();
+            scanner.nextLine();
 
             if (i == 1) {
+                System.out.println("Enter Member ID: ");
+                String memberID = scanner.nextLine();
+                System.out.println("Enter Member Name: ");
+                String name = scanner.nextLine();
+                System.out.println("Enter Age: ");
+                int age = scanner.nextInt();
 
-            }
-            */
-        System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
-                "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
+                scanner.nextLine();
 
-        int i = scanner.nextInt();
-        scanner.nextLine();
+                if (age <= 0) {
+                    System.out.println("Age cannot be less than 1");
+                }
+                else {
+                    Member member = new Member(memberID, name, age);
 
-        if (i == 1) {
-            System.out.println("Enter Member ID: ");
-            String memberID = scanner.nextLine();
-            System.out.println("Enter Member Name: ");
-            String name = scanner.nextLine();
-            System.out.println("Enter Age: ");
-            int age = scanner.nextInt();
+                    members.add(member);
 
-            scanner.nextLine();
-
-            Member member = new Member(memberID, name, age);
-
-            member.displayDetails();
-
-            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
-                    "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
-
-            i = scanner.nextInt();
-        }
-        /*
-        if (i == 2) {
-            int j;
-            for (j = 0; j < member.size(); j++) {
-                members.get(j).System.out.println(members);
+                    member.displayDetails();
+                }
             }
 
-            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
-                    "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
+            if (i == 2) {
+                if (members.size() == 0) {
+                    System.out.println("There are no gym members stored on the system yet");
+                }
+                else {
+                    for (Member member:members) {
+                        member.displayDetails();
+                    }
+                }
 
-            i = scanner.nextInt();
-            scanner.nextLine();
+            }
+
+            if (i == 3) {
+                System.out.println("Enter Member ID: ");
+                String memberID = scanner.nextLine();
+
+                boolean found = false;
+
+                for (Member member : members) {
+
+                    if (member.getMemberId().equals(memberID)) {
+                        member.displayDetails();
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    System.out.println("No member matches that data");
+                }
+            }
+
+            if (i == 4) {
+                System.out.println("Enter Member ID: ");
+                String memberID = scanner.nextLine();
+
+                boolean found = false;
+
+                for (Member member : members) {
+
+                    if (member.getMemberId().equals(memberID)) {
+                        members.remove(member);
+                        found = true;
+                        System.out.println("Member has been removed");
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    System.out.println("No member matches that data");
+                }
+
+            }
         }
-
-        if (i == 3) {
-            System.out.println("Enter Member ID: ");
-            int memberID = Integer.parseInt(System.console().readLine());
-
-            return members.findMemberById(memberID);
-
-
-            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
-                    "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
-
-            i = scanner.nextInt();
-            scanner.nextLine();
-        }
-
-        if(i = 4) {
-
-
-
-            System.out.println("---Gym Membership Manager---\n1. Add Member\n2.Display All Members\n" +
-                    "Search by ID\nRemove Member\n5. Exit\nEnter Choice: ");
-
-            i = scanner.nextInt();
-            scanner.nextLine();
-        }
-
-        if(i == 5) {
-
-        }
-
-        */
     }
 }
